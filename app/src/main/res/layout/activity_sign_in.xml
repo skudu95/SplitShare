@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorOffWhite"
+    tools:context=".activity.SignInActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_sign_in_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorOffWhite">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="?android:attr/actionBarSize"
+            android:gravity="center"
+            android:paddingStart="@dimen/toolbar_title_paddingStart"
+            android:paddingEnd="0dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbar_title_text_size"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_welcome_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_sign_in_activity"
+        android:padding="15dp"
+        android:text="@string/welcome_back"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/toolbar_title_text_size"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_welcome_back"
+        android:hint="@string/email_address"
+        android:padding="15dp"
+        android:textColorHint="@color/colorSecondaryText"
+        app:boxStrokeColor="@color/colorSecondaryText"
+        app:hintTextColor="@color/colorPrimaryText">
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/et_padding"
+            android:textColor="@color/colorPrimaryText"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/et_textSize"
+            tools:text="@string/email_address" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/til_email"
+        android:hint="@string/password"
+        android:paddingLeft="15dp"
+        android:paddingTop="6dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/colorSecondaryText"
+        app:boxStrokeColor="@color/colorSecondaryText"
+        app:hintTextColor="@color/colorPrimaryText"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:padding="@dimen/et_padding"
+            android:textColor="@color/colorPrimaryText"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/et_textSize"
+            tools:text="@string/password" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btn_sign_in"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/til_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/sign_in"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/button_text_size" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_sign_in"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/forgot_password"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/button_text_size"
+        android:textStyle="bold" />
+
+</RelativeLayout>
